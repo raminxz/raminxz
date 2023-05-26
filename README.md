@@ -13,7 +13,7 @@
 
 >[`gist`](https://githubuniverse.com/)
 
->[`hlep`](https://github.com.raminxz/raminxz/help/)
+>[`hlep`](https://github.com/raminxz/help)
 
 >[`raminxz`](https://github.com/raminxz/)
 ___
