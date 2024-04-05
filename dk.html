@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Search</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .icon-item {
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="searchInput" placeholder="Search icons...">
+    <div id="iconContainer">
+        <span class="icon-item" data-name="home"><!-- SVG icon for home --></span>
+        <span class="icon-item" data-name="search"><!-- SVG icon for search --></span>
+        <span class="icon-item" data-name="settings"><!-- SVG icon for settings --></span>
+        <span class="icon-item" data-name="user"><!-- SVG icon for user --></span>
+        <!-- Add more icons here -->
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#searchInput').on('input', function() {
+                var searchTerm = $(this).val().toLowerCase();
+                $('.icon-item').each(function() {
+                    var iconName = $(this).data('name').toLowerCase();
+                    if (iconName.includes(searchTerm)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
